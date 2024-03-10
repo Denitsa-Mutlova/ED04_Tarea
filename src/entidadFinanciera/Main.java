@@ -4,8 +4,17 @@
  */
 package entidadFinanciera;
 
+/**
+ *
+ * @author DENITSA
+ */
 public class Main {
 
+    /**
+     * Método principal que inicia la aplicación.
+     * Crea una instancia de la clase CCuenta y muestra el saldo actual.
+     * @param args
+     */
     public static void main(String[] args) {
         CCuenta objetoCuenta;
         double saldoActual;
@@ -19,6 +28,12 @@ public class Main {
         
     }
     
+    /**
+     * Realiza una prueba de retirada de dinero de una cuenta.
+     * @param cuenta La cuenta desde la que se realizará la retirada.
+     * @param cantidad La cantidad a retirar.
+     * @param cantidadEsperada La cantidad esperada tras la retirada.
+     */
     public static void probarRetirar(CCuenta cuenta, double cantidad, double cantidadEsperada) {
     try {
         cuenta.retirar(cantidad);
@@ -28,6 +43,12 @@ public class Main {
     }
 }
     
+    /**
+     * Realiza una prueba de ingreso de dinero en una cuenta.
+     * @param cuenta La cuenta en la que se realizará el ingreso.
+     * @param cantidad La cantidad a ingresar.
+     * @param cantidadEsperada La cantidad esperada tras el ingreso.
+     */
     public static void probarIngresar(CCuenta cuenta, double cantidad, double cantidadEsperada) {
     try {
         cuenta.ingresar(cantidad);

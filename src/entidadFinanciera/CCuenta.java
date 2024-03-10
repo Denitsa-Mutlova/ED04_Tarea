@@ -4,6 +4,10 @@
  */
 package entidadFinanciera;
 
+/**
+ * Clase que representa una cuenta bancaria.
+ * @author DENITSA
+ */
 public class CCuenta {
 
     /**
@@ -73,16 +77,32 @@ public class CCuenta {
     public CCuenta() {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
         cuenta = cue;
         saldo = sal;
     }
 
+    /**
+     * Devuelve el estado actual de la cuenta.
+     * @return El estado actual de la cuenta.
+     */
     public double estado() {
         return this.getSaldo();
     }
 
+    /**
+     * Ingresa una cantidad en la cuenta.
+     * @param cantidad La cantidad a ingresar.
+     * @throws Exception Si la cantidad es negativa.
+     */
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
             throw new Exception(ERRORCANTIDADNEGATIVA);
@@ -92,6 +112,11 @@ public class CCuenta {
     
     private static final String ERRORCANTIDADNEGATIVA = "No se puede ingresar una cantidad negativa";
 
+    /**
+     * Retira una cantidad de la cuenta.
+     * @param cantidad La cantidad a retirar.
+     * @throws Exception Si la cantidad es negativa o si no hay suficiente saldo.
+     */
     public void retirar(double cantidad) throws Exception {
         if (cantidad <= 0) {
             throw new Exception("No se puede retirar una cantidad negativa");
